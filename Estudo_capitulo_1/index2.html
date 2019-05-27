@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Relógio</title>
+    <link rel="icon" href="images/relogio.jpg">
+    <style>
+        body { 
+            font-family: "Courier New", Courier, monospace;
+            background: url("images/bkg.jpg") no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin: 0;
+            padding: 100px;
+            font-size: 60px;
+            color: aliceblue; 
+        }
+
+        h2{
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            background: gray;
+            opacity: 0.9;
+        }
+        
+        h3{
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            width: 75%;
+            background: gray;
+            opacity: 0.9;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h3 id="data"></h3>
+        <script>
+            var horaAgora
+            setInterval(function(){
+                var dataHOra = new Date() //variável recebe objeto Date
+                horaAgora = dataHOra.getHours() // variável recebe a hora pelo objeto Date
+                var minutos = dataHOra.getMinutes() // variável recebe minutos
+                var segundos = dataHOra.getSeconds() //variável recebe os segundos.
+                if(segundos < 10){
+                    segundos = '0'+segundos
+                }
+                if(minutos < 10){
+                    minutos = '0'+minutos
+                }
+                var data = document.getElementById('data')
+                data.innerHTML = dataHOra.toDateString() + '<br />' + horaAgora + ':' + minutos + ':' + segundos 
+            }, 1000);
+
+        </script>
+    </center>
+</body>
+</html>
