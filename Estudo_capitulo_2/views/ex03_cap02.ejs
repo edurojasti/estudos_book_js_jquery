@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ex03</title>
-    <link rel="stylesheet" href="/css/c02.css">
-    <link rel="icon" href="/images/logo.jpg">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c02.css">
+    <title>Ex03 - Cap02</title>
 </head>
 <body>
-    <h1>Elderflower</h1>
+
+    <h1>ElderFlower</h1>
     <div id="content">
-        <div id="title">Oferta especial</div>
-        <div id="note">Siga-nos para receber de forma personalizada as ofertas!</div>
+        <div id="title">Hello
+            <span id="name">Friend</span>!</div>
+            <div id="note">Take a look around...</div>
+        </div>
     </div>
-    
-    <script src="/js/ex03.js"></script>
+
+    <script>
+        var titulo = '"Muitas Ofertas Especiais"'
+        var mensage = '<a href="ex02_cap02">25% OFF</a>'
+        var elementTitulo = document.getElementById('title').innerHTML = titulo
+        var elementNote = document.getElementById('note').innerHTML = mensage
+    </script>
 </body>
 </html>

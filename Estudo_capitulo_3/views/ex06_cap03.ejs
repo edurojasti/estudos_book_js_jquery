@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c03.css">
+    <title>Ex06 - Cap02</title>
+    <style>
+        #message1, #message2{
+            background: #c3c3c3;
+            color: white;
+            padding: 8px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="message">
+        <p id="message1"></p>
+        <p id="message2"></p>
+    </div>
+
+
+<script>
+    //Criando objetos com método construtor
+    var hotel = new Object()
+    hotel.name = 'PRESIDENTE DA PRAÇA'
+    hotel.quartos = 445
+    hotel.booked = 236
+    hotel.quartosDisponíveis = function(){
+        return this.quartos - this.booked
+    }
+
+    //Obejto HotelNovo
+    var hotelNovo = new Object()
+    hotelNovo.nome = 'Hotel da Raposa'
+    hotelNovo.funcionarios = 700
+    hotelNovo.fornecedores = 358
+
+    //Exibindo dados na tela, dados dos objetos
+    document.getElementById('message1').innerHTML = `O hotel <b>${hotelNovo.nome}</b> possui ${hotelNovo.funcionarios} funcionários atualmente e ${hotelNovo.fornecedores} fornecedores.`    
+    document.getElementById('message2').innerHTML = `O hotel <b>${hotel.name}</b> possui ${hotel.quartosDisponíveis()} quartos disponíveis!`
+</script>
+</body>
+</html>

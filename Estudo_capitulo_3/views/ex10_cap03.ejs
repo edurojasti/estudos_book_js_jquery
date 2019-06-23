@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c03.css">
+    <title>Ex10 - Cap02</title>
+   
+</head>
+<body>
+    <div id="footer">
+
+    </div>
+<script>
+    var mensagem = `<p><b>Page Title: ${document.title}</b><br>` //Nome do site ou página atual sendo exibida.
+    mensagem += `<b>Page Address: ${document.URL}</b><br>`       //Link atual
+    mensagem += `<b>Last Modified: ${document.lastModified}</b></p>` //Hora da última modificação feita.
+
+    document.getElementById('footer').innerHTML = mensagem
+</script>
+</body>
+</html>

@@ -22,11 +22,42 @@ appCap02.get('/ex03_cap02', (req, res)=>{
     res.render('ex03_cap02')
 })
 
+appCap02.get('/ex04_cap02', (req, res)=>{
+    res.render('ex04_cap02')
+})
+
+appCap02.get('/ex05_cap02', (req, res)=>{
+    res.render('ex05_cap02')
+})
+
+appCap02.get('/ex06_cap02', (req, res)=>{
+    res.render('ex06_cap02')
+})
+
+
+appCap02.get('/ex07_cap02', (req, res)=>{
+    res.render('ex07_cap02')
+})
+
+
+appCap02.get('/ex08_cap02', (req, res)=>{
+    res.render('ex08_cap02')
+})
+
+appCap02.get('/ex09_cap02', (req, res)=>{
+    res.render('ex09_cap02')
+})
+
+appCap02.get('/ex10_cap02', (req, res)=>{
+    res.render('ex10_cap02')
+})
+
+
 //config do localhost
 appCap02.listen(5000, (error)=>{
     if(error){
         console.log('Server not runnig!')
     }else{
-        console.log('Sever running Ok!')
+        console.log('Server running Ok!')
     }
 })

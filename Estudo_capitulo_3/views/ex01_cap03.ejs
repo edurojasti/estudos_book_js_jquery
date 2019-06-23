@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c03.css">
+    <title>Ex01 - Cap02</title>
+</head>
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="message">
+        Welcome to our site!
+    </div>
+
+    <script>
+        //Criando uma função e fazendo a chamada da mesma.
+        //escopo de variável
+        var msg = 'Sign up to receive our newsletter for 10% off!'
+
+        //função upMsg criada
+        function upMsg(){
+            var elementoX = document.getElementById('message').innerHTML = msg
+        }
+
+        //chamada da função para que seja executado.
+        upMsg()
+    </script>
+</body>
+</html>

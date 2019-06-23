@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ex01</title>
-    <link rel="stylesheet" href="/css/c02.css">
-    <link rel="icon" href="/images/logo.jpg">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c02.css">
+    <title>Ex01 - Cap02</title>
 </head>
 <body>
-    <h1>Elderflower</h1>
+
+    <h1>ElderFlower</h1>
     <div id="content">
         <h2>Custom Signage</h2>
-        <div id="cost">Cost: $5 per tile</div>
-        <img src="images/preview.jpg" alt="Sign">
-        <button type="button" class="btn btn-primary btn-sm" onclick="window.location.href = '/'">Voltar</button>
+        <div id="cost"></div>
+        <img src="../images/preview.jpg" alt="imgPreview">
     </div>
 
-    <script src="/js/ex01.js"></script>
+
+    <script>
+        //Variáveis com preco e quantidade de letras na placa
+        var preco = 5, quantidade = 14, total = preco * quantidade
+
+        //Valor total pela placa
+        var elemento = document.getElementById('cost')
+        elemento.textContent = `$${total}`
+    
+    </script>
+    
 </body>
 </html>

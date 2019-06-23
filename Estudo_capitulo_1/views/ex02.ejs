@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Relógio</title>
     <link rel="icon" href="../images/relogio.jpg">
+    
     <style>
         body { 
             font-family: "Courier New", Courier, monospace;
-            background: url("../images/bkg.jpg") no-repeat center center fixed; 
+            /*background: url("../images/bkg.jpg") no-repeat center center fixed; */
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -39,9 +40,9 @@
 
     </style>
 </head>
-<body>
+<body class="full-landing-image">
     <center>
-        <h3 id="data"></h3>
+        <h3 id="data" class="full-landing-image"></h3>
         <script>
             var horaAgora
             setInterval(function(){
@@ -53,7 +54,14 @@
                     segundos = '0'+segundos
                 }
                 if(minutos < 10){
-                    minutos = '0'+minutos
+                    minutos = '0'+ minutos
+                }
+                if(horaAgora < 1){
+                    horaAgora = '0'+ horaAgora
+                    document.body.style.background = 'url("../images/bkg01.jpg") no-repeat center center fixed'
+                }
+                else{
+                    document.body.style.background = 'url("../images/bkg.jpg") no-repeat center center fixed'
                 }
                 var data = document.getElementById('data')
                 data.innerHTML = dataHOra.toDateString() + '<br />' + horaAgora + ':' + minutos + ':' + segundos 
@@ -61,5 +69,15 @@
 
         </script>
     </center>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+<script>
+    $(".full-landing-image").ripples({
+        resolution: 200,
+        perturbance: 0.04,
+    })
+
+</script>
 </body>
 </html>

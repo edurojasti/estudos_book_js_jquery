@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c03.css">
+    <title>Ex03 - Cap02</title>
+</head>
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="message">
+        Welcome to our site!
+    </div>
+
+    <script>
+        
+        function getSize(altura, largura, profundidade){
+            var area = altura * largura
+            var volume = altura * largura * profundidade
+            var tamanhos = [area, volume]
+            return tamanhos
+        }
+
+        var area01 = getSize(2,2,5)[0] //[0] posição ou índice 0, do array tamanhos[]
+        var volume01 = getSize(2,2,5)[1] //[1] posição ou índice 0, do array tamanhos[]
+        document.getElementById('message').innerHTML= 'Área01: '+area01 + '<br> Volume01: '+volume01
+
+    </script>
+</body>
+</html>

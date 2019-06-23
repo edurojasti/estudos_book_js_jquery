@@ -5,7 +5,7 @@ appCap01.set('view engine', 'ejs')
 appCap01.use(express.static('public'))
 
 appCap01.get('/', (req, res)=>{
-    res.render('main')
+    res.render('cap01')
 })
 
 appCap01.get('/ex01', (req, res)=>{

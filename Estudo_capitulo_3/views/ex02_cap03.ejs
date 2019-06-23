@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c03.css">
+    <title>Ex02 - Cap02</title>
+</head>
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="message">
+        Welcome to our site!
+    </div>
+
+    <script>
+        var areaAltura = 5
+        var areaLargura = 10
+        var calculaArea = getArea(areaAltura, areaLargura)
+        var calculaArea01 = getArea(5, 20)
+        var calculaArea02 = getArea(33, 122)
+        var calculaArea03 = getArea(150, areaLargura)
+        document.getElementById('message').innerHTML ='Valor da área: ' + calculaArea03 + 'm'
+
+        //função que calcula e retorna o valor de um diamêtro de altura e largura
+            function getArea(lagura, altura){
+                return lagura * altura
+            }
+    </script>
+</body>
+</html>
