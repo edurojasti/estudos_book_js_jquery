@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c03.css">
+    <title>Ex08 - Cap02</title>
+   
+</head>
+<body>
+    <h1>TravelWorthy</h1>
+    <div id="info">
+      <h2>latest hotel offer</h2>
+      <div id="hotelName"></div>
+      <div id="roomRate"></div>
+      <div id="specialRate" style="font-size: 50px;"></div>
+      <div id="offerEnds"></div>
+      <div>
+        
+      </div>
+    </div>
+      
+<script>
+   function tst(){
+       //objeto Hotel
+    var hotel = {
+        nome: 'Park do Sabiá',
+        valorQuarto: 260, //valor da reserva do quarto
+        desconto: 10,     //valor do desconto %
+        oferta: function(){
+            var valorOferta = this.valorQuarto * ((100 - this.desconto) / 100)
+            return valorOferta
+        },
+    }
+    document.getElementById('hotelName').innerHTML = hotel.nome
+    document.getElementById('roomRate').innerHTML = '$'+hotel.valorQuarto
+    document.getElementById('specialRate').innerHTML = '$'+hotel.oferta().toFixed(2)
+   }
+
+   function tst2(){
+       var msgExp, today, elementEnds
+
+       function ofertaExpira(today){
+           var diaDaSEMANA, dia, data, mes, ano, nomaDias, nomeMes                                                                                 //variáveis 
+           diaDaSEMANA = new Date(today.getTime() + 12 * 24 * 60 * 60 * 1000)                                                                      //adiciona 12 dias à data/hora atual (adicionando em milisegundos)
+           nomeDias = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']                                                       //array com os nomes dos dias
+           nomeMes = ['Janeiro', 'fevereiro', 'Março','Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outurbro', 'Novembro','Dezembro']  //array com os meses
+           dia = nomeDias[diaDaSEMANA.getDay()]
+           data = diaDaSEMANA.getDate()
+           mes = nomeMes[diaDaSEMANA.getMonth()]
+           ano = diaDaSEMANA.getFullYear()
+           msgExp = `A oferta expira no proximo ${dia} <br> ${data} ${mes} ${ano}`
+           return msgExp
+       }
+
+       today = new Date()
+       elementEnds = document.getElementById('offerEnds')
+       elementEnds.innerHTML = ofertaExpira(today)
+       
+   }
+
+   //chamada de funções para que seja efetuado o processamento dos dados e exibido na tela do browser.
+   tst()
+   tst2()
+    
+</script>
+</body>
+</html>

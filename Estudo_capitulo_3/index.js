@@ -51,6 +51,10 @@ appCap03.get('/ex10_cap03', (req, res)=>{
     res.render('ex10_cap03')
 })
 
+appCap03.get('/ex11_cap03', (req, res)=>{
+    res.render('ex11_cap03')
+})
+
 appCap03.listen(3000, (error)=>{
     if(error){
         console.log('server not running')

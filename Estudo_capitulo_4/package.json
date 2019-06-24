@@ -1,0 +1,15 @@
+{
+  "name": "estudo_capitulo_4",
+  "version": "1.0.0",
+  "description": "exemplos do cap 04 do livro JS & JQUERY",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eduardo rojas",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  }
+}
