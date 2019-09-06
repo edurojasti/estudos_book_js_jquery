@@ -1,0 +1,16 @@
+nav.navbar{
+    color: white;
+    padding: 25px;
+}
+
+#tituloBook{
+    margin: 0 auto;
+}
+
+
+#rodape{
+    padding: 15px;
+    background: #1a252f;
+    color: white;
+    width:100%;
+}

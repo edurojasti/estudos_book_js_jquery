@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/c04.css">
+    <link rel="icon" href="../images/logo.jpg">
+    <title>Ex07 - Cap04</title>
+</head>
+<body>
+    <section id="page1">
+        <h1>Bullseye</h1>
+
+        <img src="../images/teacher.png" id="teacher"/>
+
+        <section id="answer"></section>
+    </section>
+
+    <script>
+        var scores = [24, 33, 18]
+        var arrayTamanho = scores.length
+        var roundNumber = 0
+        var msg1
+
+        for(var i = 0; i < arrayTamanho; i++){
+            roundNumber = i + 1
+            msg1 = `Round${roundNumber}: ${scores[i]} <br>` // contador e valores do array scores
+            var tst = document.getElementById('answer')
+            tst.innerHTML += msg1 //o uso do += serve para iterar a cada loop 
+            console.log(msg1)
+        }
+        
+        
+    </script>
+</body>
+</html>

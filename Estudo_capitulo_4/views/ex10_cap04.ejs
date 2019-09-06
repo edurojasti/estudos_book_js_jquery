@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/c04.css">
+    <link rel="icon" href="../images/logo.jpg">
+    <title>Ex10 - Loops e Decisões</title>
+</head>
+<body>
+    <section id="page1">
+        <h1>Bullseye</h1>
+
+        <img src="../images/teacher.png" id="teacher2"/>
+
+        <section id="blackboard"></section>
+    </section>
+
+    <script>
+       var tabuada = 3          //unidade da tabuada
+       var operacao =  'mult' //tipo de cálculo soma ou multiplicação
+       var i = 1                //contador
+       var msg = ''             //mensagem
+
+       if(operacao == 'adição'){
+            while(i < 11){
+               msg += `${i} + ${tabuada} = ${i + tabuada} <br>`
+               document.getElementById('blackboard').innerHTML = msg
+               i++
+            }
+       }else{
+            while(i < 11){
+               msg += `${i} x ${tabuada} = ${i * tabuada} <br>`
+               document.getElementById('blackboard').innerHTML = msg
+               i++
+            }
+       }
+
+       
+    </script>
+</body>
+</html>

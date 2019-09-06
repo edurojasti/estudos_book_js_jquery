@@ -1,0 +1,16 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "description": "examples exercicies cap 05",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo Rojas",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/c04.css">
+    <title>Ex01 - Cap04</title>
+</head>
+<body>
+    <section id="page1">
+        <h1>Bullseye</h1>
+
+        <img src="../images/teacher.png" id="teacher"/>
+
+        <section id="answer"></section>
+    </section>
+
+    <script>
+        var pass = 50 //valor limite para passar (igual ou acima de 50)
+        var score = 55 //valor de pontos da pessoa
+        
+        //Verifica se usuário passou ou não de acordo com a pontuação limite e dele
+        var hasPassed = score >= pass
+
+        //Write the message into the page
+        var elementoX = document.getElementById('answer')
+        elementoX.textContent = 'Level passed: ' + hasPassed  
+    
+    </script>
+</body>
+</html>

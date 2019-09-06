@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/c04.css">
+    <link rel="icon" href="../images/logo.jpg">
+    <title>Ex05 - Cap04</title>
+</head>
+<body>
+    <section id="page1">
+        <h1>Bullseye</h1>
+
+        <img src="../images/teacher.png" id="teacher"/>
+
+        <section id="answer"></section>
+    </section>
+
+    <script>
+        var pass = 50
+        var score = 75
+        var msg
+
+        if(score >=pass){
+            msg = "Parabéns, você passou!"
+        }else{
+            msg = "Não passou!"
+        }
+
+        document.getElementById('answer').innerHTML = msg
+    </script>
+</body>
+</html>

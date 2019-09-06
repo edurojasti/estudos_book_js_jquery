@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/c04.css">
+    <link rel="icon" href="../images/logo.jpg">
+    <title>Ex02 - Cap04</title>
+</head>
+<body>
+    <section id="page1">
+        <h1>Bullseye</h1>
+
+        <img src="../images/teacher.png" id="teacher"/>
+
+        <section id="answer"></section>
+    </section>
+
+    <script>
+        var score1 = 90     //score da rodada 1
+        var score2 = 95     //score da rodada 2
+        var highScore1 = 75 //score alta da rodada 1
+        var highScore2 = 95 //score alta da rodada 2
+
+        //verifica se o score  é mais alto que os scores atuais...
+        var comparison = (score1 + score2) > (highScore1 + highScore2) //valor1 = 185 valor2 = 170
+        if(comparison == true){comparison = "é verdade"} else{comparison = "é mentira"}
+        document.getElementById("answer").innerHTML = comparison
+
+    
+    </script>
+</body>
+</html>

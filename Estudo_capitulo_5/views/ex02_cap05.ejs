@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c05.css">
+
+    <title>Ex02 - Cap05</title>
+</head>
+<body>
+    <div class="container-center">
+        <h1 id="header">List king</h1>
+        <h2>Buy groceries</h2>
+
+        <ul>
+            <li id="one" class="hot">
+                <em>Fresh</em> figs
+            </li>
+            <li id="two" class="hot">pine nuts</li>
+            <li id="three" class="hot">honey</li>
+            <li id="four">balsamic vinegar</li>
+        </ul>
+    </div>
+    
+
+    <!-- JS -->
+    <script>
+        var elementos = document.getElementsByClassName('hot') //localiza novos elementos com a classe "hot"
+        if(elementos.length > 2){ //se há mais de 2 elementos com a classe hot
+            var x = [elementos[0], elementos[1], elementos[2]]  //array com todos os elementos selecionados
+            x[0].className = 'cool'
+            x[1].className = 'cool'
+            x[2].className = 'cool' //muda a classe desse elemento
+        }
+    </script>
+</body>
+</html>

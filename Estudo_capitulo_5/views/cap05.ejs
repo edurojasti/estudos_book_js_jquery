@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--
+        PAGINA PRINCIPAL DO CAP 05 DO LIVRO, 
+        ONDE SERA EXIBIDO UMA TABELA COM OS LINKS DOS EXERCICIOS.
+    -->
+    <link rel="icon" href="../images/logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicios - CAPITULO 05</title>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/f8f0b10b6b.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style>
+        footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }        
+    </style>
+
+</head>
+<body>
+   <nav class="navbar navbar-dak bg-dark">
+       <div class="container">
+            <h1 id="tituloBook">
+                JAVASCRIPT & JQUERY
+            </h1>
+       </div>
+   </nav>
+   <br>
+   <main style="background: #f8f9fa; margin-top: -25px;">
+       <section class="container">
+            <div class="page-header">
+                <br>
+                <center>
+                    <h2 class="mb-2">Exercícios do Capitulo 5: Document Object Model (DOM)</h2>
+                </center>
+            </div>
+            <div class="page-body">
+                <table class="table table-hover">
+                    <thead class="bg-info" style="color: aliceblue;">
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th>
+                            <center>Link do Exemplo</center>
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr><!-- Linha 01 -->
+                            <td>#01</td>
+                            <td>Selecionando elementos usando atributos ID</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex01_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 02 -->
+                            <td>#02</td>
+                            <td>Selecionando elementos usando atributos de classe</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex02_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 03 -->
+                            <td>#03</td>
+                            <td>Selecionando elementos usando atributos de TAG</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex03_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 04 -->
+                            <td>#04</td>
+                            <td>Selecionando elementos com seletores CSS</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex04_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 05 -->
+                            <td>#05</td>
+                            <td>Iterando por uma NODELIST</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex05_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 06 -->
+                            <td>#06</td>
+                            <td>Acessando e alterando um nó de texto</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex06_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 07 -->
+                            <td>#07</td>
+                            <td>Acessando somente Texto</td>
+                            <td align="center">
+                                <button type="button" class="btn btn-info btn-sm" onclick="window.open('ex07_cap05')">
+                                    Ver Exemplo 
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- <button type="button" class="btn btn-danger">
+                    <i class="fas fa-hand-point-left"></i> capítulo anterior
+                </button> -->
+            </div>
+       </section>
+   </main>
+
+   <footer id="rodape" class="mt-3">
+       <center>
+            Eduardo Rojas - Copyright &copy; <span id="anoAtual"></span>
+       </center>
+   </footer>
+
+   <script>
+       var anoAtual = new Date().getFullYear()
+       document.getElementById('anoAtual').innerHTML = anoAtual
+   </script>
+</body>
+</html>

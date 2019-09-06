@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c05.css">
+    <title>Ex05 - Cap05</title>
+
+</head>
+<body>
+    
+    <div class="container-center">
+        <h1 id="header">List king</h1>
+        <h2>Buy groceries</h2>
+
+        <ul id="lista01">
+            <li id="one" class="hot">
+                <em>Fresh</em> figs
+            </li>
+            <li id="two" class="hot">pine nuts</li>
+            <li id="three" class="hot">honey</li>
+            <li id="four" class="hot">Ice cream</li>
+            <li id="five" class="hot">cake</li>            
+        </ul>
+
+        <ul id="lista02">
+            <li id="one" class="normal">
+                <em>Fresh</em> figs
+            </li>
+            <li id="two" class="normal">pine nuts</li>
+            <li id="three" class="normal">honey</li>
+            <li id="four" class="normal">Ice cream</li>
+            <li id="five" class="normal">cake</li>            
+        </ul>
+
+        <ul id="lista03">
+            <li id="one" class="complete">
+                <em>Fresh</em> figs
+            </li>
+            <li id="two" class="complete">pine nuts</li>
+            <li id="three" class="complete">honey</li>
+            <li id="four" class="complete">Ice cream</li>
+            <li id="five" class="complete">cake</li>  
+        </ul>
+    </div>
+    
+
+    <!-- JS -->
+    <script>
+        var list_1 = document.getElementById('lista01')
+        var list_2 = document.getElementById('lista02')
+        var list_3 = document.getElementById('lista03')
+        var valorAleatorio = Math.floor(Math.random()*3)
+        console.log(valorAleatorio)
+
+        //exibe as lista de forma aleatória de acordo a variável "valorAleatorio"
+        if(valorAleatorio == 0){
+            //apenas a lista01 fica visível
+            list_2.style.display = 'none' 
+            list_3.style.display = 'none'
+        }else if(valorAleatorio == 1){
+            //apenas a lista02 fica visível
+            list_1.style.display = 'none' 
+            list_3.style.display = 'none'
+        }else{
+            //apenas a lista03 fica visível
+            list_1.style.display = 'none' 
+            list_2.style.display = 'none'
+        }
+        
+        //logica aplicada na list01 ==========================================================================================
+        var hotItens = document.querySelectorAll('li.hot')  //armazena um nodeList no array
+        console.log(hotItens.length) //return 5
+        
+        if(hotItens.length > 0){                            //se a quantidade de <li> com classe hot for maior que zero
+            for(var i = 0; i < hotItens.length;i++){        //faz a iteração pelos elementos <li>
+                hotItens[i].className = 'cool'              //muda a classe para cool
+            }
+        }
+
+        //logica aplicada na list02 ==========================================================================================
+        var lista02 = document.querySelectorAll('li.normal')
+        if(lista02.length > 0){
+            for(var x = 0; x < lista02.length; x++){
+                lista02[x].className = 'hot'
+            }
+        }
+
+        var lista03 = document.querySelectorAll('li.complete')
+        if(lista03.length > 0){
+            for(var z = 0; z < lista03.length; z++){
+                lista03[z].className = 'normal'
+            }
+        }
+    </script>
+</body>
+</html>
