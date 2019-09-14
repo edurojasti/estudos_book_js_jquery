@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c05.css">
+    <title>Ex10 - Cap05</title>
+
+</head>
+<body>
+    <ul id="lista01">
+        <li id="um" class="hot">
+            <em>Fresh</em> figs
+        </li>
+        <li id="dois" class="hot">pine nuts</li> 
+        <li id="tres" class="hot">honey</li>
+        <li id="quatro" class="hot">balsamic vinegar</li>
+        <li id="five" class="hot">Apple</li>
+    </ul>
+
+
+    
+    <!-- JS -->
+    <script>
+        //pega o elemento a ser removido e armazena em uma variável
+        var elementoRemover = document.getElementsByTagName('li')[3]
+        var elementoRemover2 = document.getElementsByTagName('li')[4]
+
+        //pega o elemento a ser removido e o referencia com o elemento pai, no caso <ul>
+        var elementoPAI = elementoRemover.parentNode
+        var elementoPAI2 = elementoRemover2.parentNode
+        
+        //Removendo os elementos
+        elementoPAI.removeChild(elementoRemover)
+        elementoPAI2.removeChild(elementoRemover2)
+
+
+    
+    </script>
+</body>
+</html>

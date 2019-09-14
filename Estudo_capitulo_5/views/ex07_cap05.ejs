@@ -7,7 +7,7 @@
 
     <link rel="icon" href="../images/logo.jpg">
     <link rel="stylesheet" href="../css/c05.css">
-    <title>Ex06 - Cap05</title>
+    <title>Ex07 - Cap05</title>
 
 </head>
 <body>
@@ -25,17 +25,26 @@
     
     <!-- JS -->
     <script>
-        var firstItem = document.getElementById('um')
-        var showText = firstItem.textContent
-        var showInnerTxt = firstItem.innerText
-        
-        var msg = `<p>textContent: ${showText}</p>`
-            msg += `<p>innerTxt: ${showInnerTxt}</p>`
-
+        var elementoDOIS = document.getElementById('dois').textContent
+        var elementoTRES = document.getElementById('tres').textContent
+        console.log(
+            `${elementoDOIS}, ${elementoTRES}`
+        )
         var resultado = document.getElementById('scriptResults')
-        resultado.innerHTML = msg
+        resultado.innerHTML = `<p>${elementoDOIS}</p> <p>${elementoTRES}</p>`
 
-        firstItem.textContent = 'Sourdough bread'
+
+        // var firstItem = document.getElementById('um')
+        // var showText = firstItem.textContent
+        // var showInnerTxt = firstItem.innerText
+        
+        // var msg = `<p>textContent: ${showText}</p>`
+        //     msg += `<p>innerTxt: ${showInnerTxt}</p>`
+
+        // var resultado = document.getElementById('scriptResults')
+        // resultado.innerHTML = msg
+
+        // firstItem.textContent = 'Sourdough bread'
     </script>
 </body>
 </html>

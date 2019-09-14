@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c05.css">
+    <title>Ex08 - Cap05</title>
+
+</head>
+<body>
+    <ul id="lista01">
+        <li id="um" class="hot">
+            <em>Fresh</em> figs
+        </li>
+        <li id="dois" class="hot">pine nuts</li> 
+        <li id="tres" class="hot">honey</li>
+        <li id="quatro" class="hot">balsamic vinegar</li>
+    </ul>
+
+    <ul id="lista02">
+        <li id="um" class="cool">
+            <em>Fresh</em> figs
+        </li>
+        <li id="dois" class="cool">pine nuts</li> 
+        <li id="tres" class="cool">honey</li>
+        <li id="quatro" class="cool">balsamic vinegar</li>
+    </ul>
+
+    <ul id="lista03"> <!-- Comidas mineira -->  
+       <li class="complete">Feijao Tropeiro</li>
+    </ul>
+
+    
+    <!-- JS -->
+    <script>
+        //array de itens aplicado na lista03
+        var comidaMineira = ['Pão de queijo', 'Galinhada', 'Vaca tolada', 'Mocotó']
+        var lista03 = document.getElementById('lista03')
+
+        for(var z = 0; z < comidaMineira.length; z++){
+            var novaTagLi = document.createElement('li')
+            var novoTextos = document.createTextNode(comidaMineira[z])
+            novaTagLi.className = 'complete'
+            novaTagLi.appendChild(novoTextos)
+            lista03.appendChild(novaTagLi)
+        }
+
+
+
+        //array de itens aplicado na lista02
+        var comidasBolivianas = ['Asadito', 'Salteñas', 'Silpancho', 'Sopa de Maní', 'Patasca', 'Majadito']
+        var lista02 = document.getElementById('lista02')
+        
+        for(var x = 0; x < comidasBolivianas.length; x++){
+            var novaLI = document.createElement('li')
+            var novoTexto = document.createTextNode(comidasBolivianas[x])
+            
+            novaLI.appendChild(novoTexto)
+            lista02.appendChild(novaLI)
+        }
+
+        //array de itens aplicado na lista01
+        var maisCoisas = ['Uva', 'Maça', 'Sorvete de Açaí', 'Banan Split', 'Laranja']
+        var listaCurrent = document.getElementById('lista01')//lista com ID "lista01"
+
+        for(var i = 0; i < 5; i++){
+            var criarLI = document.createElement('li')
+            var textos = document.createTextNode(maisCoisas[i])
+            criarLI.appendChild(textos)
+            criarLI.className = 'hot'
+
+            listaCurrent.appendChild(criarLI)
+        }
+
+        var sorteioList = Math.floor(Math.random() * 3)
+        console.log(sorteioList)
+        if(sorteioList == 0){
+            listaCurrent.style.display = 'none'
+            lista02.style.display = 'none'
+        }else if(sorteioList == 1){
+            lista02.style.display = 'none'
+            lista03.style.display = 'none'
+        }else{
+            lista03.style.display = 'none'
+            listaCurrent.style.display = 'none'
+        }
+
+
+        //Exercicio do livro
+        //======================================================================================================
+        // var pegarLISTA = document.getElementsByTagName('ul')[0]
+      
+        // //Cria um novo elemento e o armazena em uma variável
+        // var tagLI = document.createElement('li')
+        
+        // //Cria um nodeTexto e armazena em uma variável
+        // var texto = document.createTextNode('UVA')
+
+        // //o texto é incluso na nova TAG <li>UVA</li>
+        // tagLI.appendChild(texto)
+
+        // //a nova tag LI contendo um texto, é inserido dentro da lista <ul>
+        // pegarLISTA.appendChild(tagLI)
+        //======================================================================================================
+    </script>
+</body>
+</html>

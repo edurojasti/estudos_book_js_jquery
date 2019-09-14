@@ -37,6 +37,18 @@ appCap05.get('/ex07_cap05', (req, res)=>{ //function arrow
     res.render('ex07_cap05')
 })
 
+appCap05.get('/ex08_cap05', (req, res)=>{ //function arrow
+    res.render('ex08_cap05')
+})
+
+appCap05.get('/ex09_cap05', (req, res)=>{ //function arrow
+    res.render('ex09_cap05')
+})
+
+appCap05.get('/ex10_cap05', (req, res)=>{ //function arrow
+    res.render('ex10_cap05')
+})
+
 appCap05.listen(5000, (error)=>{
     if(error){console.log('serviço OFF')}
     else{console.log('serviço ON')}
