@@ -49,7 +49,7 @@ appCap05.get('/ex10_cap05', (req, res)=>{ //function arrow
     res.render('ex10_cap05')
 })
 
-appCap05.listen(5000, (error)=>{
+appCap05.listen(5000, (error)=>{          //localhost onde o servidor está online
     if(error){console.log('serviço OFF')}
     else{console.log('serviço ON')}
 })
