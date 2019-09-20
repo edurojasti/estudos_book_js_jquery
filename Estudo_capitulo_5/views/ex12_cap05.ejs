@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="../images/logo.jpg">
+    <link rel="stylesheet" href="../css/c05.css">
+    <title>Ex12 - Cap05</title>
+
+</head>
+<body>
+    <ul id="lista01">
+        <li id="1" class="hot">
+            <em>Fresh</em> figs
+        </li>
+        <li id="2" class="cool">pine nuts</li> 
+        <li id="3" class="hot">honey</li>
+        <li id="4" class="normal">balsamic vinegar</li>
+        <li id="5" class="hot">Apple</li>
+        
+    </ul>
+    <div id="scriptResults"></div>
+
+    <!-- JS -->
+    <script> 
+            //Adicionando e removando atributos a cada 4 segundos
+            //exemplo 12 e 13 aqui.
+    
+            setInterval(() => {
+                let valorAleatorio = Math.round(Math.random()*5)
+                //pega o elemento ID 1
+                var x1 = document.getElementById(valorAleatorio)
+
+                // Adiciona um atributo do tipo style ao elemento,
+                // e o parâmetro desse atributo é background:green
+                setTimeout(() => {
+                    x1.setAttribute('style','background:green; color:#000')
+                }, 1000);
+
+                //aqui estamos removendo o estilo que foi adicionado na linha anterior (33)
+                setTimeout(() => {
+                    x1.removeAttribute('style')
+                }, 2000);                
+            }, 4000);           
+    </script>
+</body>
+</html>
