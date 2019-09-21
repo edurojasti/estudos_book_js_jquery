@@ -42,43 +42,131 @@
     </style>
 </head>
 <body class="full-landing-image">
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center" id="pai">
         <h1 id="data" class="full-landing-image text-center"></h1>
-        <script>
-            var horaAgora
-            setInterval(function(){
-                var dataHOra = new Date()            //variável recebe objeto Date
-                horaAgora = dataHOra.getHours()      // variável recebe a hora pelo objeto Date
-                var minutos = dataHOra.getMinutes()  // variável recebe minutos
-                var segundos = dataHOra.getSeconds() //variável recebe os segundos.
-
-                if(segundos < 10){
-                    segundos = '0'+segundos
-                }
-                if(minutos < 10){
-                    minutos = '0'+ minutos
-                }
-                if(horaAgora < 7){
-                    horaAgora = '0'+ horaAgora
-                    document.body.style.background = 'url("../images/bg_madrugada.jpg") no-repeat center center fixed'
-                }
-                else if(horaAgora < 12){
-                    document.body.style.background = 'url("../images/bg_manha.jpg") no-repeat center center fixed'
-                }
-
-                else if(horaAgora < 18){
-                    document.body.style.background = 'url("../images/bg_tarde.jpg") no-repeat center center fixed'
-                }
-
-                else if(horaAgora < 23){
-                    document.body.style.background = 'url("../images/bg_noite.jpg") no-repeat center center fixed'
-                }
-                var data = document.getElementById('data')
-                data.innerHTML = dataHOra.toDateString() + '<br />' + horaAgora + ':' + minutos + ':' + segundos 
-            }, 1000);
-
-        </script>
+        
     </div>
+    <center>
+        <button class="btn btn-danger btn-lg" type="button" id="pararMusica" onclick="pausarMusica()">Parar música</button>  
+    </center>
+
+
+
+    <script>
+        class MusicaEscolhida{
+            constructor(nomeMusica, localSalvo){
+               this.nome = nomeMusica
+               this.local = localSalvo 
+            }
+        }
+
+
+        var nomeMusica = 'musica02'
+        var localSalvo = '../som/audio01_name_OnOn.mp3'
+
+
+        var musicaNova = new MusicaEscolhida(nomeMusica, localSalvo)
+        console.log(musicaNova.local)
+        var transforme = JSON.stringify(musicaNova)
+        console.log(transforme)
+
+        var salvandoBD = ()=>{
+            localStorage.setItem('02', transforme)
+        }
+        salvandoBD()
+
+        
+
+        var buscandoMusica = (x)=>{
+            var buscou = JSON.parse(localStorage.getItem(x))
+            return buscou
+        }
+
+        var qualMusica = 1
+        var musicaBuscada
+        if(qualMusica == 1){
+            musicaBuscada = buscandoMusica('01')
+            console.log(musicaBuscada)
+            console.log(`O nome da musica é: ${musicaBuscada.nome}`)
+        }else if(qualMusica == 2){
+            musicaBuscada = buscandoMusica('02')
+            console.log(musicaBuscada)
+        }
+
+        console.log(musicaBuscada.nome)
+        
+
+
+
+        var elementPAI = document.getElementById('pai')
+        var musica01 = document.createElement('audio')  //cria um elemento audio
+        musica01.id = 'som01'                           //insere um ID ao elemento criado
+        musica01.src = musicaBuscada.local   //buscao a música a ser inserida como toque
+        elementPAI.appendChild(musica01)                //inserida dentro do elemento pai
+
+        var musicTST = document.getElementById('som01') //recupera o ELEMENTO PARA MANIPULAÇÃO 
+
+        var horaAgora, botaoMSC
+        botaoMSC = document.getElementById('pararMusica') //ID do botao parar musica
+        botaoMSC.style.display = 'none'       
+
+        setInterval(function(){
+            var dataHOra = new Date()            //variável recebe objeto Date
+            horaAgora = dataHOra.getHours()      // variável recebe a hora pelo objeto Date
+            var minutos = dataHOra.getMinutes()  // variável recebe minutos
+            var segundos = dataHOra.getSeconds() //variável recebe os segundos.
+
+            if(segundos < 10){
+                segundos = '0'+segundos
+            }
+            if(minutos < 10){
+                minutos = '0'+ minutos
+            }
+            if(horaAgora < 7){
+                horaAgora = '0'+ horaAgora
+                document.body.style.background = 'url("../images/bg_madrugada.jpg") no-repeat center center fixed'
+            }
+            else if(horaAgora < 12){
+                document.body.style.background = 'url("../images/bg_manha.jpg") no-repeat center center fixed'
+            }
+
+            else if(horaAgora < 18){
+                document.body.style.background = 'url("../images/bg_tarde.jpg") no-repeat center center fixed'
+            }
+
+            else if(horaAgora < 24){
+                document.body.style.background = 'url("../images/bg_noite.jpg") no-repeat center center fixed'
+            }
+            var data = document.getElementById('data')
+            data.innerHTML = dataHOra.toDateString() + '<br />' + horaAgora + ':' + minutos + ':' + segundos
+
+            //logica pra despertador
+            
+            function tocarMusica(){
+                musicTST.play()
+                botaoMSC.style.display = 'block'
+            }
+
+            var minutoPraSom = new Date()
+            var m = minutoPraSom.getMinutes()
+            var h = minutoPraSom.getHours()
+
+            if(m == 58 && h == 02){
+                // window.location.reload()
+                tocarMusica()
+                console.log(minutoPraSom.getMinutes())
+            }                
+        }, 1000);
+        
+        function parar(){
+            musica01.src = "parou!"
+            console.log('abacou musica!')
+            // botaoMSC.style.display = 'none!import' 
+        }
+        botaoMSC.addEventListener('click', parar)
+
+
+    </script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
