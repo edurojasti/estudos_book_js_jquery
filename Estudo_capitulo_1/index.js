@@ -11,7 +11,10 @@ appCap01.get('/', (req, res)=>{
 appCap01.get('/ex01', (req, res)=>{
     res.render('ex01')
 })
+ 
 
+
+   
 appCap01.get('/ex02', (req, res)=>{
     res.render('ex02')
 })
