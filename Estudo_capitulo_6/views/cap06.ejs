@@ -1,0 +1,116 @@
+<!DOChref html>
+<html lang="pt-br">
+<head>
+    <!--
+        PAGINA PRINCIPAL DO CAP 06 DO LIVRO, 
+        ONDE SERA EXIBIDO UMA TABELA COM OS LINKS DOS EXERCICIOS.
+    -->
+    <link rel="icon" href="../images/logo.jpg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicios - CAPITULO 06</title>
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/f8f0b10b6b.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style>
+        footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }        
+    </style>
+</head>
+<body>
+   <nav class="navbar navbar-dak bg-dark">
+       <div class="container">
+            <h1 id="tituloBook">
+                JAVASCRIPT & JQUERY
+            </h1>
+       </div>
+   </nav>
+   <br>
+   <main style="background: #f8f9fa; margin-top: -25px;">
+       <section class="container">
+            <div class="page-header">
+                <br>
+                <center>
+                    <h2 class="mb-2">Exercícios do Capitulo 6: EVENTOS</h2>
+                </center>
+            </div>
+            <div class="page-body">
+                <table class="table table-hover">
+                    <thead class="bg-info" style="color: aliceblue;">
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th>
+                            <center>Link do Exemplo</center>
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr><!-- Linha 01 -->
+                            <td>#01</td>
+                            <td>Selecionando elementos usando atributos ID</td>
+                            <td align="center">
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Ver Exemplo 
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 02 -->
+                            <td>#02</td>
+                            <td>Exemplo number 2</td>
+                            <td align="center">
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Ver Exemplo 
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr><!-- Linha 02 -->
+                            <td>#03</td>
+                            <td>Exemplo number 3</td>
+                            <td align="center">
+                                <a href="#" class="btn btn-primary btn-sm">
+                                    Ver Exemplo 
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- <a href="#" class="btn btn-danger">
+                    <i class="fas fa-hand-point-left"></i> capítulo anterior
+                </a> -->
+            </div>
+       </section>
+   </main>
+   <br><br>
+   <footer id="rodape" class="mt-3">
+       <center>
+            Eduardo Rojas - Copyright &copy; <span id="anoAtual"></span>
+       </center>
+   </footer>
+
+   <script>
+       //Pega o Ano atual
+        var anoAtual = new Date().getFullYear()
+        document.getElementById('anoAtual').textContent = anoAtual
+
+        //pegando todos os as
+        let botoes = document.querySelectorAll('a.btn-primary')
+        console.log(botoes.length)
+
+        for(var c = 0 ; c < botoes.length; c++){
+            var maisUm = c + 1
+            botoes[c].href = `ex0${maisUm}_cap06`
+            botoes[c].target = "_blank"
+        }
+   </script>
+   
+</body>
+</html>
