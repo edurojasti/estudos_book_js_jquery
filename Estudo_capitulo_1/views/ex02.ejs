@@ -129,6 +129,11 @@
             if(minutos < 10){
                 minutos = '0'+ minutos
             }
+
+            if(horaAgora < 10){
+                horaAgora = '0'+ horaAgora
+            }
+
             if(horaAgora < 7){
                 horaAgora = '0'+ horaAgora
                 document.body.style.background = 'url("../images/bg_madrugada.jpg") no-repeat center center fixed'
