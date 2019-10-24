@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
         body { 
             font-family: "Courier New", Courier, monospace;
             /*background: url("../images/bkg.jpg") no-repeat center center fixed; */
@@ -20,10 +21,11 @@
             padding: 100px;
             font-size: 60px;
             color: #fff; 
+            font-family: 'Patua One', cursive;
         }
 
         h2{
-            padding: 10px;
+            /* padding: 22px; */
             border: 1px solid gray;
             border-radius: 10px;
             background: gray;
@@ -31,12 +33,16 @@
         }
         
         h1{
-            padding: 10px;
-            border: 1px solid gray;
+            /* padding: 10px; */
+            /* border: 1px solid gray; */
             border-radius: 10px;
-            background: gray;
+            padding: 40px;
+            /* background: gray; */
             opacity: 0.9;
-            font-size: 80px;
+            font-size: 60px;
+            height: 200px;
+            background-color: #34495e; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to bottom right, #34495e, #7f8c8d); /* Standard syntax (must be last) */
         }
 
     </style>
@@ -44,7 +50,6 @@
 <body class="full-landing-image">
     <div class="container d-flex justify-content-center" id="pai">
         <h1 id="data" class="full-landing-image text-center"></h1>
-        
     </div>
     <center>
         <button class="btn btn-danger btn-lg" type="button" id="pararMusica" onclick="pausarMusica()">Parar música</button>  
@@ -64,8 +69,8 @@
         var nomeMusica = 'musica02'
         var localSalvo = '../som/audio01_name_OnOn.mp3'
 
-
         var musicaNova = new MusicaEscolhida(nomeMusica, localSalvo)
+
         console.log(musicaNova.local)
         var transforme = JSON.stringify(musicaNova)
         console.log(transforme)
@@ -82,8 +87,10 @@
             return buscou
         }
 
-        var qualMusica = 1
-        var musicaBuscada
+        console.log(buscandoMusica())
+
+        var qualMusica = 2
+        var musicaBuscada = ''
         if(qualMusica == 1){
             musicaBuscada = buscandoMusica('01')
             console.log(musicaBuscada)
@@ -147,11 +154,16 @@
                 botaoMSC.style.display = 'block'
             }
 
+            // function pararMusica(){
+            //     musicTST.pause()
+            //     botaoMSC.style.display = 'block'
+            // }
+
             var minutoPraSom = new Date()
             var m = minutoPraSom.getMinutes()
             var h = minutoPraSom.getHours()
 
-            if(m == 44 && h == 11){
+            if(m == 45 && h == 7){
                 // window.location.reload()
                 tocarMusica()
                 console.log(minutoPraSom.getMinutes())
@@ -161,7 +173,7 @@
         function parar(){
             musica01.src = "parou!"
             console.log('abacou musica!')
-            // botaoMSC.style.display = 'none!import' 
+            botaoMSC.remove() 
         }
         botaoMSC.addEventListener('click', parar)
 
