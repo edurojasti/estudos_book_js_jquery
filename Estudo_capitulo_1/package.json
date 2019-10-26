@@ -4,12 +4,14 @@
   "description": "capitulo 01 do book",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "nodemon index.js"
   },
   "author": "eduardorojas",
   "license": "MIT",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4"
   }
 }

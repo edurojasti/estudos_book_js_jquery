@@ -12,7 +12,7 @@ appCap06.get('/ex01_cap06',(req, res)=>{
     res.render('ex01_cap06');
 })
 
-appCap06.listen(5500, (error)=>{
+appCap06.listen(5000, (error)=>{
     if(error){console.log('sistema Offline!');}
     else{console.log('Sistema Online!');}
 })
