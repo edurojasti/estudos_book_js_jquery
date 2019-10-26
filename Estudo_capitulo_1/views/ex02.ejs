@@ -44,12 +44,14 @@
             background-color: #34495e; /* For browsers that do not support gradients */
             background-image: linear-gradient(to bottom right, #34495e, #7f8c8d); /* Standard syntax (must be last) */
         }
-
+        .full-landing-image{
+            height: 100vh;
+        }
     </style>
 </head>
 <body class="full-landing-image">
     <div class="container d-flex justify-content-center" id="pai">
-        <h1 id="data" class="full-landing-image text-center"></h1>
+        <h1 id="data" class="text-center"></h1>
     </div>
     <center>
         <button class="btn btn-danger btn-lg" type="button" id="pararMusica" onclick="pausarMusica()">Parar música</button>  
@@ -122,6 +124,8 @@
             horaAgora = dataHOra.getHours()      // variável recebe a hora pelo objeto Date
             var minutos = dataHOra.getMinutes()  // variável recebe minutos
             var segundos = dataHOra.getSeconds() //variável recebe os segundos.
+            // var diaHOJE = dataHOra.getUTCDay()
+            // console.log(diaHOJE)
 
             if(segundos < 10){
                 segundos = '0'+segundos
@@ -151,7 +155,7 @@
             }
             var data = document.getElementById('data')
             data.innerHTML = dataHOra.toDateString() + '<br />' + horaAgora + ':' + minutos + ':' + segundos
-
+            // console.log(dataHOra.toDateString())
             //logica pra despertador
             
             function tocarMusica(){
@@ -190,7 +194,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
 <script>
     $(".full-landing-image").ripples({
-        resolution: 200,
+        resolution: 300,
         perturbance: 0.04,
     })
 
